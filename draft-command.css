@@ -1,0 +1,88 @@
+.draft-command { --nwr-cyan:#63e8ff; --nwr-violet:#a997ff; --nwr-panel:#101722; padding:clamp(18px,4vw,44px); background:radial-gradient(circle at 90% 0,rgba(113,89,255,.18),transparent 32%),#080c13; color:#eef7ff; }
+.draft-command *, .draft-command *::before, .draft-command *::after { box-sizing:border-box; }
+.draft-command button, .draft-command select, .draft-command input { font:inherit; }
+.command-header { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:22px; align-items:end; }
+.command-header h2 { margin:6px 0; font-size:clamp(2.2rem,5vw,5rem); letter-spacing:-.05em; }
+.command-header > div:first-child > p:first-child, .strategy-select > div > p:first-child, .decision-window header > p:first-child, .decision-tree header > p:first-child, .war-room-sidebar section > p:first-child, .war-room-debrief header > p:first-child { color:var(--nwr-cyan); font:.58rem var(--mono,monospace); letter-spacing:.1em; text-transform:uppercase; }
+.trust-strip { max-width:480px; display:flex; flex-wrap:wrap; gap:6px; justify-content:flex-end; }
+.trust-strip span { padding:7px 9px; border:1px solid #31465a; color:#bdd1df; font:.5rem var(--mono,monospace); }
+.strategy-select { margin-top:28px; padding:clamp(18px,4vw,36px); border:1px solid #263b4c; background:rgba(16,23,34,.9); }
+.strategy-grid { margin-top:18px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; }
+.strategy-grid button { min-height:150px; padding:18px; display:grid; align-content:center; gap:9px; border:1px solid #31485c; background:#101925; color:inherit; text-align:left; }
+.strategy-grid button:hover, .strategy-grid button:focus-visible { border-color:var(--nwr-cyan); background:#142433; }
+.strategy-grid strong { font-size:1.1rem; }
+.strategy-grid span, .league-line { color:#aabcca; line-height:1.55; }
+.command-controls { margin:18px 0 10px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.command-controls button, .command-controls label, .command-controls > span { min-height:44px; padding:0 12px; display:inline-flex; align-items:center; border:1px solid #31485c; background:#101925; color:#c6d7e3; }
+.command-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(230px,.3fr); gap:10px; align-items:start; }
+.command-layout > main, .war-room-sidebar section, .decision-tree { min-width:0; border:1px solid #263b4c; background:rgba(16,23,34,.94); }
+.decision-window, .war-room-debrief { padding:clamp(16px,3vw,28px); }
+.decision-window h3, .decision-tree h3, .war-room-debrief h3 { margin:5px 0 9px; }
+.draft-board { margin:20px 0; }
+.draft-board > div:first-child { display:flex; justify-content:space-between; gap:12px; align-items:end; }
+.draft-board h4 { margin:0; }
+.draft-board p { color:#9fb1bf; }
+.prospect-grid { margin-top:10px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.prospect-grid article { min-width:0; padding:13px; border:1px solid #2c4255; background:#0c131d; }
+.prospect-grid article header { display:grid; grid-template-columns:auto 1fr; gap:5px 9px; }
+.prospect-grid article header span { grid-row:1/3; min-width:42px; display:grid; place-items:center; border:1px solid var(--nwr-cyan); color:var(--nwr-cyan); font-weight:800; }
+.prospect-grid article header small { color:#8fa5b4; }
+.prospect-grid dl { margin:12px 0; }
+.prospect-grid dl div { display:flex; justify-content:space-between; gap:9px; padding:5px 0; border-top:1px solid #1e3040; font-size:.58rem; }
+.prospect-grid dt { color:#8fa5b4; }
+.prospect-grid dd { margin:0; text-align:right; }
+.prospect-grid details { color:#aebfca; font-size:.6rem; }
+.compare-strip { margin-top:8px; padding:12px; display:grid; grid-template-columns:1fr 1fr auto; gap:8px; border:1px solid #2c4255; }
+.compare-strip label { display:grid; gap:5px; color:#8fa5b4; font-size:.56rem; }
+.compare-strip select { min-width:0; min-height:44px; border:1px solid #38536a; background:#0b121b; color:#eef7ff; }
+.compare-strip button, .branch-grid button, .debrief-actions button { min-height:44px; border:1px solid var(--nwr-cyan); background:var(--nwr-cyan); color:#07131b; font-weight:800; }
+.compare-strip p { grid-column:1/-1; margin:0; }
+.branch-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.branch-grid button { min-height:188px; padding:13px; display:flex; flex-direction:column; align-items:flex-start; text-align:left; }
+.branch-grid button span { font:.47rem var(--mono,monospace); text-transform:uppercase; }
+.branch-grid button strong { margin-top:7px; }
+.branch-grid button small { margin-top:auto; padding-top:8px; line-height:1.4; }
+.branch-effects { width:100%; margin:12px 0 0; padding-top:9px; border-top:1px solid currentColor; }
+.branch-effects div { display:grid; grid-template-columns:40px 1fr; gap:7px; padding:3px 0; font-size:.54rem; line-height:1.35; }
+.branch-effects dt { opacity:.7; font:inherit; text-transform:uppercase; }
+.branch-effects dd { margin:0; font-weight:600; }
+.branch-grid button:disabled { border-color:#2b3a46; background:#111923; color:#6f7d87; }
+.war-room-sidebar { display:grid; gap:10px; }
+.war-room-sidebar section { padding:15px; }
+.war-room-sidebar ul { margin:12px 0; padding:0; list-style:none; }
+.war-room-sidebar li { display:grid; grid-template-columns:34px 1fr; gap:3px 8px; padding:7px 0; border-top:1px solid #253644; }
+.war-room-sidebar li span { grid-row:1/3; color:var(--nwr-cyan); font-weight:800; }
+.war-room-sidebar li small { color:#8299a9; }
+.capital-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+.capital-grid div { padding:9px; border:1px solid #2a4051; text-align:center; }
+.capital-grid dt { color:#8ca0ae; font-size:.5rem; }
+.capital-grid dd { margin:4px 0 0; color:var(--nwr-cyan); font-size:1.1rem; }
+.decision-tree { margin-top:10px; padding:clamp(15px,3vw,26px); }
+.decision-tree > ol { margin:16px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; list-style:none; }
+.decision-tree > ol > li { min-width:0; min-height:150px; padding:12px; border:1px solid #2c4255; background:#0b121b; }
+.decision-tree .is-complete { border-color:var(--nwr-violet); }
+.decision-tree .is-future { opacity:.58; }
+.decision-tree li p, .decision-tree li span { color:#8fa5b4; font-size:.55rem; }
+.decision-tree li strong { display:block; margin:7px 0; }
+.decision-consequence { display:block; margin-top:8px; color:#b8c9d5; line-height:1.4; }
+.decision-tree details ul { padding-left:16px; }
+.decision-tree details li { margin:6px 0; }
+.decision-tree details li small { display:block; color:#8395a3; }
+.decision-tree .is-chosen { color:var(--nwr-cyan); }
+.decision-tree .is-unavailable { opacity:.55; }
+.debrief-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.debrief-grid article { padding:13px; border:1px solid #2c4255; background:#0b121b; }
+.debrief-grid span { color:#8fa5b4; font:.48rem var(--mono,monospace); text-transform:uppercase; }
+.debrief-grid strong { display:block; margin:7px 0; color:var(--nwr-cyan); }
+.debrief-grid p { margin:0; color:#aebfca; }
+.debrief-notes { margin-top:14px; }
+.debrief-notes div { display:grid; grid-template-columns:150px 1fr; gap:10px; padding:8px 0; border-top:1px solid #2a3a47; }
+.debrief-notes dt { color:var(--nwr-violet); }
+.debrief-notes dd { margin:0; color:#b6c6d0; }
+.debrief-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.command-status { min-height:44px; margin:10px 0 0; padding:11px; border:1px solid #263b4c; color:#aabcca; }
+.draft-command button:focus-visible, .draft-command select:focus-visible, .draft-command input:focus-visible, .command-status:focus-visible, #debrief-title:focus-visible { outline:3px solid var(--nwr-cyan); outline-offset:3px; }
+@media (max-width:900px) { .command-header, .command-layout { grid-template-columns:1fr; } .trust-strip { justify-content:flex-start; } .war-room-sidebar { grid-template-columns:1fr 1fr; } .decision-tree > ol { grid-template-columns:1fr 1fr; } }
+@media (max-width:560px) { .draft-command { padding:14px; } .strategy-grid, .prospect-grid, .branch-grid, .debrief-grid, .war-room-sidebar, .decision-tree > ol { grid-template-columns:1fr; } .branch-grid button { min-height:168px; } .compare-strip { grid-template-columns:1fr; } .compare-strip p { grid-column:1; } .debrief-notes div { grid-template-columns:1fr; } .command-controls > * { width:100%; } }
+@media (prefers-reduced-motion:reduce) { .draft-command *, .draft-command *::before, .draft-command *::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; } }
+@media (forced-colors:active) { .draft-command, .strategy-select, .strategy-grid button, .command-layout > main, .war-room-sidebar section, .decision-tree, .prospect-grid article, .branch-grid button, .compare-strip, .decision-tree > ol > li, .debrief-grid article { border-color:CanvasText; background:Canvas; color:CanvasText; } .branch-grid button, .compare-strip button, .debrief-actions button { background:ButtonFace; color:ButtonText; } }

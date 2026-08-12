@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-theme="carbon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070a12">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Play six local browser experiences by Spencer Colety exploring governed builds, evidence-aware decisions, privacy, planning, and graph navigation.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Maximum Signal Lab">
+  <meta property="og:title" content="Spencer Colety — Maximum Signal Lab">
+  <meta property="og:description" content="Six distinct local browser experiences make software architecture, decisions, privacy, and product craft playable.">
+  <meta property="og:image" content="social-card.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Maximum Signal Lab — six playable software project experiences by Spencer Colety">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spencer Colety — Maximum Signal Lab">
+  <meta name="twitter:description" content="Six distinct local browser experiences make software architecture, decisions, privacy, and product craft playable.">
+  <meta name="twitter:image" content="social-card.svg">
+  <meta name="twitter:image:alt" content="Maximum Signal Lab — six playable software project experiences by Spencer Colety">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <style>@media(max-width:480px){.hero-copy{min-width:0}.hero h1{font-size:clamp(3rem,15vw,7rem)}}</style>
+  <link rel="stylesheet" href="experiments/experiment-dock.css?v=3">
+  <script src="script.js" defer></script>
+  <script type="module" src="experiments/loader.js?v=24"></script>
+  <title>Spencer Colety — Maximum Signal Lab</title>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+  <canvas id="network-canvas" aria-hidden="true"></canvas>
+  <div class="pointer-light" aria-hidden="true"></div>
+
+  <header class="command-bar">
+    <a class="brand" href="#main"><span>SC</span><strong>Maximum Signal</strong><small>Experimental portfolio build</small></a>
+    <nav aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#playable-projects">Playable</a><a href="#lab">Labs</a><a href="#inventory">Features</a></nav>
+    <div class="header-actions">
+      <button class="key-button" id="open-palette" type="button"><kbd>Ctrl</kbd><kbd>K</kbd><span>Command</span></button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Change color theme">◐</button>
+      <button class="icon-button" id="open-shortcuts" type="button" aria-label="Show keyboard shortcuts">?</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="live-dot"></span> Interactive portfolio system / v10.0</p>
+        <h1>I design<br><span id="typed-role">useful systems</span><span class="caret" aria-hidden="true"></span></h1>
+        <p class="hero-intro">A deliberately overloaded showcase of computer science, interaction design, and modern browser capabilities. Explore it, break it, and steal the best ideas for the final portfolio.</p>
+        <div class="hero-actions"><a class="primary-action" href="#lab">Enter the lab <span>↓</span></a><button type="button" id="randomize-site">Randomize interface</button></div>
+      </div>
+      <aside class="telemetry reveal" aria-label="Local portfolio activity">
+        <div class="telemetry-head"><span>LOCAL_ACTIVITY</span><span id="clock">00:00:00</span></div>
+        <div class="metric"><strong data-count="16">0</strong><span>interactive systems</span></div>
+        <div class="metric"><strong data-count="4">0</strong><span>project models</span></div>
+        <div class="metric"><strong id="interaction-count">0</strong><span>your interactions</span></div>
+        <div class="signal-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="telemetry-foot"><span>FPS <b id="fps">60</b></span><span>THEME <b id="theme-label">CARBON</b></span><span>STATUS <b>LOCAL</b></span></div>
+      </aside>
+    </section>
+
+    <section class="feature-marquee" aria-label="Feature highlights"><div><span>Command palette</span><span>Canvas graph</span><span>Algorithm lab</span><span>Pathfinding</span><span>Live terminal</span><span>Theme engine</span><span>Drag persistence</span><span>Offline-ready</span><span>Keyboard-first</span><span>Command palette</span><span>Canvas graph</span><span>Algorithm lab</span></div></section>
+
+    <section class="project-cockpit reveal" id="projects" aria-labelledby="project-title">
+      <header class="section-heading"><p class="eyebrow">01 / Project cockpit</p><h2 id="project-title">Software as evidence.</h2><p>Filter the project system, inspect its data flow, and move between technical lenses.</p></header>
+      <div class="project-shell">
+        <div class="project-rail" role="tablist" aria-label="Projects">
+          <button role="tab" aria-selected="true" data-project="houseos"><span>01</span><strong>HouseOS</strong><small>State + operations</small></button>
+          <button role="tab" aria-selected="false" data-project="nwr"><span>02</span><strong>Niners War Room</strong><small>Decision architecture</small></button>
+          <button role="tab" aria-selected="false" data-project="family"><span>03</span><strong>Family Tree</strong><small>Graphs + privacy</small></button>
+          <button role="tab" aria-selected="false" data-project="labs"><span>04</span><strong>ColetyLabs</strong><small>Guarded automation</small></button>
+        </div>
+        <article class="project-view" aria-live="polite">
+          <div class="project-view-top"><span id="project-type">OPERATIONS SYSTEM</span><button id="project-favorite" type="button" aria-pressed="false">☆ Save idea</button></div>
+          <h3 id="project-name">HouseOS</h3><p id="project-copy">A role-aware workflow direction that turns operational state into a clear next action.</p>
+          <div class="data-flow" aria-label="Project data flow"><div><span>INPUT</span><strong id="flow-input">Operational state</strong></div><i>→</i><div><span>MODEL</span><strong id="flow-model">Role × state</strong></div><i>→</i><div><span>OUTPUT</span><strong id="flow-output">Next action</strong></div></div>
+          <div class="project-stack"><span id="project-concept">Finite-state thinking</span><span id="project-method">Information architecture</span><span id="project-value">Clarity before complexity</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experiment-dock reveal" id="playable-projects" aria-labelledby="playable-projects-title" data-experiment-launcher>
+      <header class="section-heading">
+        <p class="eyebrow">02 / Playable project showroom</p>
+        <h2 id="playable-projects-title">Six real projects.<br>Made playable.</h2>
+        <p>These are small, playable demonstrations of real projects Spencer built. Each uses fictional, public-safe material to make one part of the product easier to understand.</p>
+        <div class="showroom-promise" aria-label="Showroom boundaries"><span><strong>6</strong> local demos</span><span><strong>0</strong> accounts required</span><span>Loads only when selected</span></div>
+      </header>
+      <div class="experiment-launcher-grid" aria-label="Playable projects">
+        <article class="experiment-card" data-experience-card="tsf"><div class="experiment-card-top"><p>Governed software build</p><span>Local demo</span></div><h3>Thousand Sunny Fleet — Build Lab</h3><p>Direct a small browser build while a fictional work crew delegates, verifies, repairs, and stops safely.</p><p class="experiment-proof"><span>See the project idea:</span> bounded automation with human product authority.</p><dl><div><dt>Time</dt><dd>3–6 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="tsf-build-lab">Play Build Lab <span aria-hidden="true">→</span></button></article>
+        <article class="experiment-card" data-experience-card="nwr"><div class="experiment-card-top"><p>Evidence-aware strategy</p><span>Local demo</span></div><h3>Niners War Room — Draft Command</h3><p>Choose a dynasty strategy and build a branching fictional roster plan under uncertainty.</p><p class="experiment-proof"><span>See the project idea:</span> decisions that keep evidence, tradeoffs, and later consequences visible.</p><dl><div><dt>Time</dt><dd>2–4 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="nwr-draft-command">Play Draft Command <span aria-hidden="true">→</span></button></article>
+        <article class="experiment-card" data-experience-card="wine"><div class="experiment-card-top"><p>Restaurant service game</p><span>Local demo</span></div><h3>Urban Kitchen Wine List — Sommelier Rush</h3><p>Pair fictional bottles with changing tables before their patience runs out.</p><p class="experiment-proof"><span>See the project idea:</span> transparent recommendations with useful substitutions and tradeoffs.</p><dl><div><dt>Time</dt><dd>2–4 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="wine-sommelier-rush">Play Sommelier Rush <span aria-hidden="true">→</span></button></article>
+        <article class="experiment-card" data-experience-card="family"><div class="experiment-card-top"><p>Read-only relationship graph</p><span>Local demo</span></div><h3>Family Tree — Interactive Example Tree</h3><p>Search, focus, and trace relationships across a wholly fictional family.</p><p class="experiment-proof"><span>See the project idea:</span> fast graph navigation that respects private-family boundaries.</p><dl><div><dt>Time</dt><dd>1–3 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="family-tree-explorer">Explore the Tree <span aria-hidden="true">→</span></button></article>
+        <article class="experiment-card" data-experience-card="easy"><div class="experiment-card-top"><p>Calm daily planning</p><span>Local demo</span></div><h3>EasyLife — Clear the Day</h3><p>Capture a thought, organize a fictional morning, and choose one trustworthy place to start.</p><p class="experiment-proof"><span>See the project idea:</span> capture-first planning with room for uncertainty.</p><dl><div><dt>Time</dt><dd>1–2 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="easylife-clear-the-day">Play Clear the Day <span aria-hidden="true">→</span></button></article>
+        <article class="experiment-card" data-experience-card="house"><div class="experiment-card-top"><p>Pre-service publishing</p><span>Local demo</span></div><h3>HouseOS — Ready for Service</h3><p>Turn a fictional Manager draft into a Staff-safe published revision.</p><p class="experiment-proof"><span>See the project idea:</span> role-aware workflow with a hard privacy and publication gate.</p><dl><div><dt>Time</dt><dd>1–2 min</dd></div><div><dt>Input</dt><dd>Keyboard · touch · pointer</dd></div></dl><button class="experiment-launch" type="button" data-launch-experiment="houseos-ready-for-service">Play Ready for Service <span aria-hidden="true">→</span></button></article>
+      </div>
+      <div class="experiment-launch-status"><span class="experiment-load-status" role="status" aria-live="polite">Choose a playable project.</span><div class="experiment-load-failure" data-experiment-failure hidden role="alert"><strong>The experience could not load.</strong><span>The launcher and project explanation remain available.</span></div></div>
+      <div class="experiment-stage" data-experiment-stage hidden><div class="experiment-stage-actions"><button type="button" data-return-launcher>Return to launcher</button><button type="button" data-restart-experiment>Restart experience</button></div><div class="experiment-mount" data-experiment-mount></div></div>
+      <noscript><p class="experiment-noscript">JavaScript is unavailable, so the playable projects cannot run. Their project summaries remain available.</p></noscript>
+    </section>
+
+    <section class="lab-section" id="lab" aria-labelledby="lab-title">
+      <header class="section-heading reveal"><p class="eyebrow">03 / Interactive systems laboratory</p><h2 id="lab-title">Every card does something.</h2><p>Drag cards to reorder them. Your arrangement, theme, saved ideas, and terminal history persist locally.</p></header>
+      <div class="lab-grid" id="lab-grid">
+        <article class="lab-card span-2 reveal" draggable="true" data-card="algorithm">
+          <header><div><span class="card-number">A.01</span><h3>Algorithm visualizer</h3></div><span class="drag-handle" title="Drag card">⠿</span></header>
+          <p>Shuffle the data, then watch comparison and swap operations turn disorder into structure.</p>
+          <div class="algorithm-bars" id="algorithm-bars" aria-label="Array visualization"></div>
+          <div class="card-controls"><select id="algorithm-select" aria-label="Sorting algorithm"><option value="bubble">Bubble sort</option><option value="insertion">Insertion sort</option></select><button id="shuffle-array" type="button">Shuffle</button><button id="run-sort" type="button">Run sort</button></div>
+          <div class="card-status"><span>Comparisons <b id="comparison-count">0</b></span><span>Swaps <b id="swap-count">0</b></span><span>Complexity <b id="complexity">O(n²)</b></span></div>
+        </article>
+
+        <article class="lab-card reveal" draggable="true" data-card="terminal">
+          <header><div><span class="card-number">A.02</span><h3>Portfolio terminal</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Type <code>help</code>, <code>projects</code>, <code>skills</code>, <code>theme</code>, or <code>clear</code>.</p>
+          <div class="terminal" id="terminal-output" role="log" aria-live="polite"><p><span>system</span> SpencerOS ready. Type “help”.</p></div>
+          <form class="terminal-form" id="terminal-form"><label for="terminal-input">visitor@portfolio:~$</label><input id="terminal-input" autocomplete="off" spellcheck="false"></form>
+        </article>
+
+        <article class="lab-card reveal" draggable="true" data-card="graph">
+          <header><div><span class="card-number">A.03</span><h3>Knowledge graph</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Move your pointer through the graph. Related skills attract, connect, and reorganize.</p>
+          <canvas id="skill-graph" aria-label="Interactive graph of computer science skills"></canvas>
+          <div class="card-status"><span>Nodes <b>12</b></span><span>Edges <b id="edge-count">0</b></span><span>Model <b>Force graph</b></span></div>
+        </article>
+
+        <article class="lab-card span-2 reveal" draggable="true" data-card="pathfinder">
+          <header><div><span class="card-number">A.04</span><h3>Breadth-first pathfinder</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Click cells to add walls. Then run BFS to find the shortest unweighted path from start to finish.</p>
+          <div class="path-grid" id="path-grid" aria-label="Interactive pathfinding grid"></div>
+          <div class="card-controls"><button id="run-path" type="button">Find shortest path</button><button id="clear-path" type="button">Reset grid</button><span id="path-result">Ready</span></div>
+        </article>
+
+        <article class="lab-card reveal" draggable="true" data-card="code">
+          <header><div><span class="card-number">A.05</span><h3>Code specimen</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Switch technical lenses and copy a compact example.</p>
+          <div class="code-tabs" role="tablist"><button role="tab" aria-selected="true" data-code="state">State</button><button role="tab" aria-selected="false" data-code="graph">Graph</button><button role="tab" aria-selected="false" data-code="guard">Guard</button></div>
+          <pre><code id="code-output">function transition(state, event) {
+  const next = table[state]?.[event];
+  return next ?? state;
+}</code></pre>
+          <button class="copy-button" id="copy-code" type="button">Copy code</button>
+        </article>
+
+        <article class="lab-card reveal" draggable="true" data-card="meters">
+          <header><div><span class="card-number">A.06</span><h3>Technical range</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Custom web components render a compact, accessible capability profile.</p>
+          <div class="meters"><skill-meter label="Systems thinking" value="92"></skill-meter><skill-meter label="Software design" value="86"></skill-meter><skill-meter label="Automation" value="88"></skill-meter><skill-meter label="Data modeling" value="82"></skill-meter></div>
+          <div class="card-status"><span>Component <b>&lt;skill-meter&gt;</b></span><span>API <b>Web Components</b></span></div>
+        </article>
+
+        <article class="lab-card span-2 reveal" draggable="true" data-card="event-stream">
+          <header><div><span class="card-number">A.07</span><h3>Interaction event stream</h3></div><span class="drag-handle">⠿</span></header>
+          <p>A transparent view of the interface state you are changing—without analytics or network tracking.</p>
+          <div class="event-stream" id="event-stream" aria-live="polite"></div>
+          <div class="card-controls"><button id="clear-events" type="button">Clear stream</button><span>Local only · no data leaves this page</span></div>
+        </article>
+
+        <article class="lab-card reveal" draggable="true" data-card="system">
+          <header><div><span class="card-number">A.08</span><h3>Browser capability probe</h3></div><span class="drag-handle">⠿</span></header>
+          <p>Progressively enhances based on features your current browser supports.</p>
+          <ul class="capability-list" id="capability-list"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="inventory reveal" id="inventory" aria-labelledby="inventory-title">
+      <header class="section-heading"><p class="eyebrow">04 / Feature inventory</p><h2 id="inventory-title">The entire experiment.</h2><p>These are candidates, not a recommendation to ship everything.</p></header>
+      <div class="feature-cloud"><span>Canvas particle network</span><span>Pointer-reactive graph</span><span>Command palette</span><span>Keyboard shortcuts</span><span>Three themes</span><span>View Transitions API</span><span>Typed headline</span><span>Scroll progress</span><span>Intersection reveals</span><span>Algorithm animation</span><span>BFS pathfinding</span><span>Terminal interface</span><span>Draggable cards</span><span>Persistent preferences</span><span>Project favorites</span><span>Copy to clipboard</span><span>Web Components</span><span>Live FPS</span><span>Event stream</span><span>Capability detection</span><span>Responsive containers</span><span>Reduced motion</span><span>Offline service worker</span><span>Installable manifest</span><span>ARIA live regions</span><span>Adaptive navigation</span></div>
+    </section>
+  </main>
+
+  <footer><span>Spencer Colety / Maximum Signal Lab</span><span>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> anywhere</span><span>Built to be edited down.</span></footer>
+
+  <dialog id="command-palette" class="dialog">
+    <form method="dialog"><header><strong>Command palette</strong><button value="cancel" aria-label="Close">×</button></header><input id="command-search" placeholder="Search actions…" autocomplete="off"><div id="command-results" class="command-results"></div></form>
+  </dialog>
+  <dialog id="shortcut-dialog" class="dialog compact">
+    <form method="dialog"><header><strong>Keyboard shortcuts</strong><button value="cancel" aria-label="Close">×</button></header><dl><div><dt><kbd>Ctrl</kbd> <kbd>K</kbd></dt><dd>Open command palette</dd></div><div><dt><kbd>T</kbd></dt><dd>Cycle theme</dd></div><div><dt><kbd>P</kbd></dt><dd>Jump to projects</dd></div><div><dt><kbd>L</kbd></dt><dd>Jump to labs</dd></div><div><dt><kbd>?</kbd></dt><dd>Show shortcuts</dd></div></dl></form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

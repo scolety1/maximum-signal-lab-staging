@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title description">
+  <title id="title">Maximum Signal Lab</title>
+  <desc id="description">Six playable software project experiences by Spencer Colety.</desc>
+  <defs>
+    <linearGradient id="signal" x1="0" x2="1"><stop stop-color="#70e1f5"/><stop offset=".55" stop-color="#a78bfa"/><stop offset="1" stop-color="#ff8d6b"/></linearGradient>
+    <radialGradient id="glow" cx="80%" cy="10%" r="80%"><stop stop-color="#263057"/><stop offset="1" stop-color="#070a12"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#39445c"/>
+  <rect x="36" y="36" width="1128" height="8" fill="url(#signal)"/>
+  <g fill="#70e1f5" font-family="Consolas, monospace" font-size="18" letter-spacing="3">
+    <text x="84" y="105">SPENCER COLETY / PLAYABLE PORTFOLIO</text>
+  </g>
+  <g fill="#f3f5f8" font-family="Segoe UI, Arial, sans-serif" font-weight="650">
+    <text x="80" y="245" font-size="92">Maximum</text>
+    <text x="80" y="335" font-size="92">Signal Lab</text>
+  </g>
+  <text x="84" y="395" fill="#aeb8ca" font-family="Segoe UI, Arial, sans-serif" font-size="26">Six local browser experiences. Software as visible evidence.</text>
+  <g font-family="Consolas, monospace" font-size="16" fill="#d5dceb">
+    <rect x="84" y="454" width="151" height="48" fill="#111827" stroke="#70e1f5"/><text x="105" y="484">BUILD LAB</text>
+    <rect x="249" y="454" width="171" height="48" fill="#111827" stroke="#a78bfa"/><text x="270" y="484">DRAFT COMMAND</text>
+    <rect x="434" y="454" width="171" height="48" fill="#111827" stroke="#ff8d6b"/><text x="455" y="484">SOMMELIER</text>
+    <rect x="619" y="454" width="151" height="48" fill="#111827" stroke="#6ee7a8"/><text x="640" y="484">FAMILY TREE</text>
+    <rect x="784" y="454" width="137" height="48" fill="#111827" stroke="#f4e6bd"/><text x="805" y="484">EASYLIFE</text>
+    <rect x="935" y="454" width="145" height="48" fill="#111827" stroke="#79d9cf"/><text x="956" y="484">HOUSEOS</text>
+  </g>
+  <text x="84" y="552" fill="#7f8aa0" font-family="Consolas, monospace" font-size="15" letter-spacing="2">EXPERIMENTAL LOCAL REVIEW CANDIDATE</text>
+</svg>
