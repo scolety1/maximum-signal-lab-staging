@@ -1,0 +1,298 @@
+.capsule-shell {
+  --capsule-pad: clamp(18px, 3vw, 42px);
+  display: block;
+  min-width: 0;
+  background:
+    radial-gradient(circle at 84% 4%, color-mix(in srgb, var(--accent2) 14%, transparent), transparent 31%),
+    var(--bg);
+  color: var(--text);
+}
+
+.capsule-shell *,
+.capsule-shell *::before,
+.capsule-shell *::after {
+  box-sizing: border-box;
+}
+
+.capsule-shell button,
+.capsule-shell a {
+  touch-action: manipulation;
+}
+
+.capsule-shell button:focus-visible,
+.capsule-shell a:focus-visible,
+.capsule-shell [tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.capsule-header {
+  padding: var(--capsule-pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  border-bottom: 1px solid var(--line2);
+}
+
+.capsule-header > div:first-child {
+  max-width: 780px;
+}
+
+.capsule-overline,
+.capsule-panel-kicker {
+  margin: 0 0 10px;
+  color: var(--hot);
+  font: .52rem var(--mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.capsule-header h3 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 5.8rem);
+  line-height: .88;
+  letter-spacing: -.055em;
+}
+
+.capsule-header > div > p:last-child {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.capsule-trust {
+  max-width: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.capsule-trust span {
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  color: var(--good);
+  font: .49rem var(--mono);
+  text-transform: uppercase;
+}
+
+.capsule-tabs {
+  padding: 0 var(--capsule-pad);
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--line2);
+}
+
+.capsule-tabs button {
+  min-width: 130px;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font: .58rem var(--mono);
+  text-transform: uppercase;
+}
+
+.capsule-tabs button:first-child {
+  border-left: 1px solid var(--line);
+}
+
+.capsule-tabs button[aria-selected="true"] {
+  box-shadow: inset 0 -3px var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--accent);
+}
+
+.capsule-panel {
+  min-width: 0;
+}
+
+.capsule-panel[hidden] {
+  display: none;
+}
+
+.capsule-copy-panel {
+  padding: var(--capsule-pad);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line2);
+}
+
+.capsule-copy-panel > div {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 34px);
+  background: var(--panel-solid);
+}
+
+.capsule-copy-panel h4 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.capsule-copy-panel p,
+.capsule-copy-panel li {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.capsule-copy-panel ul {
+  padding-left: 20px;
+}
+
+.capsule-proof-list {
+  display: grid;
+  gap: 9px;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.capsule-proof-list li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 9px;
+  align-items: start;
+  padding: 10px;
+  border: 1px solid var(--line);
+}
+
+.capsule-proof-list span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--good);
+  color: var(--bg);
+  font-weight: 800;
+}
+
+.capsule-boundary-card {
+  border-top: 3px solid var(--hot);
+}
+
+.capsule-repository-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--accent);
+}
+
+.capsule-project-context {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.capsule-project-context div {
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+
+.capsule-project-context dt {
+  color: var(--accent);
+  font: .52rem var(--mono);
+  text-transform: uppercase;
+}
+
+.capsule-project-context dd {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.capsule-details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--accent);
+  font: .6rem var(--mono);
+  text-transform: uppercase;
+}
+
+.capsule-details[open] summary {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.capsule-copy-panel a {
+  color: var(--accent);
+}
+
+.capsule-inline-failure {
+  margin: var(--capsule-pad);
+  padding: 24px;
+  border: 1px solid var(--hot);
+  color: var(--hot);
+}
+
+.capsule-inline-failure p,
+.capsule-inline-failure details {
+  color: var(--muted);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .capsule-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .capsule-trust {
+    max-width: none;
+    justify-content: flex-start;
+  }
+
+  .capsule-copy-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .capsule-tabs {
+    padding: 0;
+  }
+
+  .capsule-tabs button {
+    min-width: 0;
+    min-height: 52px;
+    flex: 1;
+    padding: 0 8px;
+  }
+}
+
+@media (forced-colors: active) {
+  .capsule-shell,
+  .capsule-copy-panel,
+  .capsule-copy-panel > div {
+    background: Canvas;
+  }
+
+  .capsule-tabs button[aria-selected="true"],
+  .capsule-trust span,
+  .capsule-proof-list li,
+  .capsule-repository-link,
+  .capsule-inline-failure {
+    border: 2px solid CanvasText;
+    box-shadow: none;
+  }
+}
+.public-snapshot-strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.35rem 1rem;margin:0 0 1rem;padding:.65rem .8rem;border:1px solid currentColor;border-radius:.45rem;font:700 .68rem/1.35 var(--mono,ui-monospace,monospace);letter-spacing:.04em}.public-snapshot-strip span{opacity:.8}.public-snapshot-strip strong{font-weight:800;text-align:right}@media(max-width:520px){.public-snapshot-strip{display:grid}.public-snapshot-strip strong{text-align:left}}

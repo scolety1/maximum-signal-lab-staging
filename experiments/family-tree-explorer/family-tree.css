@@ -1,0 +1,72 @@
+.family-explorer { --paper:#f4eddb; --ink:#25372f; --muted:#5c6f64; --line:#9aaa9f; --leaf:#315f48; padding:clamp(18px,4vw,48px); background:var(--paper); color:var(--ink); }
+.family-explorer button,.family-explorer input,.family-explorer select { font:inherit; }
+.family-explorer button { min-height:44px; border:1px solid var(--line); border-radius:4px; background:#fffdf6; color:inherit; cursor:pointer; }
+.family-explorer button:hover,.family-explorer button:focus-visible { border-color:var(--leaf); outline:2px solid transparent; box-shadow:0 0 0 3px rgba(49,95,72,.25); }
+.family-header { display:flex; align-items:end; justify-content:space-between; gap:24px; border-bottom:1px solid var(--line); padding-bottom:22px; }
+.family-header h2 { margin:.15em 0; font:700 clamp(2rem,5vw,4.6rem)/.95 Georgia,serif; letter-spacing:-.045em; }
+.family-header p:first-child,.person-profile>p:first-child,.relationship-finder>div>p:first-child { color:var(--leaf); font:700 .68rem var(--mono,monospace); letter-spacing:.12em; text-transform:uppercase; }
+.family-header>div>p:last-child { max-width:62ch; color:var(--muted); }
+.family-header dl { display:grid; grid-template-columns:repeat(3,minmax(70px,1fr)); gap:8px; margin:0; }
+.family-header dl div { padding:12px; border-left:1px solid var(--line); }
+.family-header dt { color:var(--muted); font-size:.7rem; text-transform:uppercase; }
+.family-header dd { margin:3px 0 0; font:700 1.6rem Georgia,serif; }
+.family-toolbar { display:flex; justify-content:space-between; align-items:end; gap:16px; margin:24px 0 10px; }
+.family-toolbar label,.relationship-controls label { display:grid; gap:6px; font-weight:700; }
+.family-toolbar label { flex:1; max-width:520px; }
+.family-toolbar input,.relationship-controls select { min-height:46px; padding:0 12px; border:1px solid var(--line); background:#fffdf6; color:inherit; }
+.view-switch { display:flex; gap:6px; }
+.view-switch button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+.family-search-results { min-height:0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:14px; }
+.family-search-results p { width:100%; margin:0; color:var(--muted); }
+.family-search-results button { display:grid; height:auto; padding:8px 12px; text-align:left; }
+.family-search-results small { color:var(--muted); }
+.family-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(230px,290px); gap:18px; align-items:start; }
+.family-layout>main,.tree-workspace { min-width:0; }
+.tree-workspace,.family-list,.person-profile,.relationship-finder { border:1px solid var(--line); background:#fffaf0; }
+.tree-workspace>header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px; border-bottom:1px solid var(--line); }
+.tree-workspace h3,.family-list h3,.person-profile h3,.relationship-finder h3 { margin:.15em 0; font:700 1.35rem Georgia,serif; }
+.tree-workspace header p { margin:4px 0 0; color:var(--muted); font-size:.82rem; }
+.zoom-controls,.pan-controls { display:flex; gap:6px; align-items:center; }
+.zoom-controls button { padding:0 12px; }
+.zoom-controls output { min-width:46px; text-align:center; font:700 .75rem var(--mono,monospace); }
+.pan-controls { justify-content:center; padding:7px; border-bottom:1px solid var(--line); }
+.pan-controls button { min-width:44px; }
+.pan-controls span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+.tree-viewport { height:500px; overflow:hidden; touch-action:none; background-image:radial-gradient(#b9c3bb 1px,transparent 1px); background-size:22px 22px; }
+.tree-canvas { position:relative; width:920px; height:540px; transform:translate(var(--tree-x),var(--tree-y)) scale(var(--tree-zoom)); transform-origin:top left; transition:transform .18s ease; }
+.tree-canvas svg { position:absolute; inset:0; width:920px; height:540px; overflow:visible; }
+.tree-canvas line { stroke:#789083; stroke-width:2; }
+.tree-canvas line[data-edge-type="partner"] { stroke-dasharray:5 5; }
+.person-node { position:absolute; left:var(--node-x); top:var(--node-y); width:126px; min-height:66px!important; padding:7px; display:grid; grid-template-columns:34px 1fr; grid-template-areas:"avatar name" "avatar place"; align-items:center; gap:0 7px; transform:translate(-50%,-50%); text-align:left; box-shadow:0 5px 14px rgba(37,55,47,.11); }
+.person-node[aria-pressed="true"],.person-node.is-path { border-color:var(--leaf); background:#dcebdc; box-shadow:0 0 0 3px var(--leaf); }
+.person-node>span { grid-area:avatar; display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:var(--leaf); color:white; font-size:.72rem; }
+.person-node strong { grid-area:name; font-size:.78rem; }
+.person-node small { grid-area:place; color:var(--muted); font-size:.64rem; }
+.person-profile { padding:18px; position:sticky; top:12px; }
+.profile-avatar { width:74px; height:74px; display:grid; place-items:center; border-radius:50%; background:var(--leaf); color:white; font:700 1.3rem Georgia,serif; }
+.person-profile dl { display:grid; gap:8px; }
+.person-profile dl div { display:flex; justify-content:space-between; gap:10px; border-bottom:1px dotted var(--line); }
+.person-profile dd { margin:0; text-align:right; }
+.person-profile button { width:100%; padding:7px; }
+.read-only-note { color:var(--muted); font-size:.74rem; }
+.family-list { padding:18px; }
+.family-list section { margin-top:18px; }
+.family-list h4 { border-bottom:1px solid var(--line); padding-bottom:5px; }
+.family-list ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; }
+.family-list button { width:100%; height:auto; padding:10px; display:grid; grid-template-columns:36px 1fr; text-align:left; }
+.family-list button span { grid-row:1/3; }
+.family-list button small { color:var(--muted); }
+.relationship-finder { display:grid; grid-template-columns:minmax(180px,.8fr) minmax(280px,1.2fr); gap:20px; margin-top:18px; padding:18px; }
+.relationship-finder p { color:var(--muted); }
+.relationship-controls { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.relationship-controls button { grid-column:1/-1; background:var(--leaf); color:white; }
+.relationship-finder>[data-relationship-result] { grid-column:1/-1; margin:0; padding:12px; border-left:3px solid var(--leaf); background:#edf4e9; color:var(--ink); font-weight:700; overflow-wrap:anywhere; }
+.relationship-path { display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+.relationship-path li { position:relative; display:flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid var(--line); background:#fffdf6; }
+.relationship-path li+li::before { content:"→"; margin-left:-18px; color:var(--leaf); }
+.relationship-path span { display:grid; place-items:center; width:22px; height:22px; border-radius:50%; background:var(--leaf); color:white; font:.7rem var(--mono,monospace); }
+.family-status { margin:12px 0 0; color:var(--muted); font-size:.78rem; }
+@media (max-width:760px) { .family-header,.family-toolbar { align-items:stretch; flex-direction:column; } .family-header dl { width:100%; } .family-layout { grid-template-columns:1fr; } .person-profile { position:static; } .relationship-finder { grid-template-columns:1fr; } .relationship-controls { grid-template-columns:1fr; } .relationship-controls button { grid-column:auto; } }
+@media (max-width:560px) { .family-explorer { padding:14px; } .tree-workspace>header { align-items:stretch; flex-direction:column; } .zoom-controls { flex-wrap:wrap; } .tree-viewport { height:420px; } .family-list ul { grid-template-columns:1fr; } .view-switch { width:100%; } .view-switch button { flex:1; } .relationship-path { display:grid; grid-template-columns:1fr; } .relationship-path li+li::before { content:"↓"; margin:0; position:absolute; transform:translateY(-25px); } }
+@media (prefers-reduced-motion:reduce) { .tree-canvas { transition:none; } }
+@media (forced-colors:active) { .family-explorer,.tree-workspace,.family-list,.person-profile,.relationship-finder,.family-explorer button,.family-explorer input,.family-explorer select,.relationship-finder>[data-relationship-result] { background:Canvas; color:CanvasText; border-color:CanvasText; } .person-node>span,.profile-avatar { background:Highlight; color:HighlightText; } .person-node[aria-pressed="true"] { outline:3px solid Highlight; } }
